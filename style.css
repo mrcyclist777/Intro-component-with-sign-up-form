@@ -1,0 +1,213 @@
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    
+    --Blue: hsl(248, 32%, 49%);
+
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    font-size: 16px;
+    background: url(images/bg-intro-mobile.png) no-repeat, var(--Red);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 80px 24px;
+  }
+
+  main .text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: white;
+  }
+
+  main .text h1 {
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-bottom: -25px;
+  }
+
+  main .text p {
+    padding: 12px;
+  }
+
+  main .panel-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .panel-section .purple {
+    background-color: var(--Blue);
+    padding: 18px 60px;
+    color: white;
+    border-radius: 8px;
+    font-weight: 300;
+    box-shadow: 0 8px 1px 0 rgba(0, 0, 0 , 0.2), 0 6px 20px 0 rgba(0, 0, 0 , 0.2);
+  }
+
+  .purple b {
+    font-weight: 700;
+  }
+
+  .panel-section #panel {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 1px 0 rgba(0, 0, 0 , 0.2), 0 6px 20px 0 rgba(0, 0, 0 , 0.2);
+  }
+
+  #panel .input {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .input input {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    outline: none;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  input:focus {
+    border: 1px solid var(--Blue);
+    outline: none;
+  }
+  
+  .input img {
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+  }
+
+  #panel .green {
+    background-color: var(--Green);
+    padding: 15px;
+    margin: 15px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin-top: 15px;
+  }
+
+  #panel small {
+    color: var(--Red);
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  #panel .terms {
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+    margin-top: -10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 10px;
+  }
+  #panel .terms a{
+    color: var(--Red);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .input small{
+    opacity: 0;
+  }
+
+  .input.error small {
+    opacity: 1;
+  }
+
+  .input.error img {
+    opacity: 1;
+  }
+
+  @media (min-width: 990px) {
+    body {
+        background: url(images/bg-intro-desktop.png), var(--Red);
+      }
+    
+    main {
+        flex-direction: row;
+        text-align: center;
+        gap: 100px;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 80px 24px;
+      }
+
+      main .text {
+        width: 550px;
+        text-align: start;
+        margin-right: -50px;
+      }
+
+      main .text h1{
+        font-size: 3rem;
+        line-height: 55px;
+    }
+    
+      main .panel-section {
+        width: 500px;
+      }
+
+      #panel .input {
+       padding-left: 25px;
+       padding-right: 25px;
+      }
+
+      #panel .green {
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+
+      .panel-section #panel {
+        gap: 20px;
+      }
+
+      #panel .terms {
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 10px;
+      }
+
+      
+
+    
+  }
